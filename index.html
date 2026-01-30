@@ -3,229 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIM Coaching Centre</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-
+<title>AIM Coaching Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background: linear-gradient(120deg,#020024,#090979,#00d4ff);
-    color:white;
-    overflow-x:hidden;
-}
-
-/* ===== NAVBAR ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:#050816;color:white;}
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    padding:15px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,0.6);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+  position:fixed;top:0;width:100%;
+  display:flex;justify-content:space-between;
+  padding:18px 10%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:1000;
 }
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;}
+nav a:hover{color:#00e5ff;}
 
-nav h2 span{ color:#ffeb3b; }
-
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav ul li{
-    cursor:pointer;
-    font-weight:500;
-}
-
-nav ul li:hover{
-    color:#ffeb3b;
-}
-
-/* ===== SECTIONS ===== */
-section{
-    min-height:100vh;
-    padding:120px 10%;
-    display:none;
-    animation:fade 0.6s ease;
-}
-
-section.active{
-    display:block;
-}
-
-@keyframes fade{
-    from{opacity:0; transform:translateY(20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-/* ===== HOME ===== */
 .hero{
-    text-align:center;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:radial-gradient(circle at top,#0f2027,#050816);
 }
-
-.hero h1{
-    font-size:4rem;
-    font-weight:800;
-}
-
-.hero h1 span{ color:#ffeb3b; }
-
-.hero p{
-    margin:20px 0;
-    font-size:1.2rem;
-    color:#ddd;
-}
-
+.hero h1{font-size:4.2rem;font-weight:900;}
+.hero h1 span{color:#00e5ff;}
+.hero p{margin:20px 0;font-size:1.2rem;color:#ccc;}
 .hero button{
-    margin-top:30px;
-    padding:15px 45px;
-    border:none;
-    border-radius:40px;
-    background:linear-gradient(135deg,#ffeb3b,#ff9800);
-    font-size:1.1rem;
-    cursor:pointer;
+  padding:16px 50px;
+  border:none;border-radius:40px;
+  background:#00e5ff;color:black;
+  font-size:1.1rem;cursor:pointer;
+  transition:0.3s;
 }
+.hero button:hover{transform:scale(1.1);}
 
-/* ===== CARDS ===== */
+section{padding:100px 10%;}
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
 }
-
 .card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    padding:35px;
-    border-radius:25px;
-    text-align:center;
+  background:rgba(255,255,255,0.06);
+  padding:40px;border-radius:25px;
+  transition:0.4s;
 }
-
-.card h3{
-    color:#ffeb3b;
-    margin-bottom:15px;
-}
-
-/* ===== STATS ===== */
-.stats{
-    display:flex;
-    justify-content:space-around;
-    text-align:center;
-}
-
-.stats h2{
-    font-size:3rem;
-    color:#00e5ff;
-}
-
-/* ===== FOOTER ===== */
-footer{
-    background:black;
-    padding:25px;
-    text-align:center;
-    color:#aaa;
-}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-    .hero h1{font-size:2.5rem;}
-    .stats{flex-direction:column; gap:30px;}
-}
+.card:hover{transform:translateY(-15px);}
+footer{background:black;text-align:center;padding:30px;color:#aaa;}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-    <h2>in<span>AIM</span></h2>
-    <ul>
-        <li onclick="showPage('home')">Home</li>
-        <li onclick="showPage('courses')">Courses</li>
-        <li onclick="showPage('results')">Results</li>
-        <li onclick="showPage('contact')">Contact</li>
-    </ul>
+  <h2>AIM</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </nav>
 
-<!-- HOME -->
-<section id="home" class="active">
-    <div class="hero">
-        <h1>in<span>AIM</span> Coaching Centre</h1>
-        <p>Turning Ambition into Achievement</p>
-        <button onclick="showPage('courses')">Explore Courses</button>
-    </div>
+<div class="hero">
+  <div>
+    <h1>AIM <span>Coaching Center</span></h1>
+    <p>Discipline • Direction • Distinction</p>
+    <a href="courses.html"><button>View Programs</button></a>
+  </div>
+</div>
+
+<section>
+  <h2>Why AIM Coaching?</h2><br><br>
+  <div class="cards">
+    <div class="card"><h3>Expert Faculty</h3><p>Experienced mentors with proven results.</p></div>
+    <div class="card"><h3>Focused Batches</h3><p>Limited students for personal attention.</p></div>
+    <div class="card"><h3>Consistent Results</h3><p>Strong academic outcomes every year.</p></div>
+  </div>
 </section>
 
-<!-- COURSES -->
-<section id="courses">
-    <h1>Our Courses</h1><br>
-    <div class="cards">
-        <div class="card">
-            <h3>IIT-JEE</h3>
-            <p>Advanced concept-based preparation.</p>
-        </div>
-        <div class="card">
-            <h3>NEET</h3>
-            <p>Medical entrance focused training.</p>
-        </div>
-        <div class="card">
-            <h3>Foundation</h3>
-            <p>Strong base for classes 6–10.</p>
-        </div>
-    </div>
-</section>
-
-<!-- RESULTS -->
-<section id="results">
-    <h1>Our Results</h1><br>
-    <div class="stats">
-        <div>
-            <h2>95%</h2>
-            <p>Success Rate</p>
-        </div>
-        <div>
-            <h2>5000+</h2>
-            <p>Students</p>
-        </div>
-        <div>
-            <h2>10+</h2>
-            <p>Years Experience</p>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-    <h1>Contact Us</h1><br>
-    <p>Email: aimcoaching@gmail.com</p>
-    <p>Phone: +91 9942823314</p>
-    <p>Location: Your City</p>
-</section>
-
-<footer>
-    © 2026 AIM Coaching Centre
-    DESIGNED WITH ❤️ BY 🔥🔥AAYUSHMANSINGH🔥🔥
-</footer>
-
-<script>
-function showPage(pageId){
-    document.querySelectorAll('section').forEach(sec=>{
-        sec.classList.remove('active');
-    });
-    document.getElementById(pageId).classList.add('active');
-}
-</script>
+<footer>© 2026 AIM Coaching Center</footer>
 
 </body>
 </html>
